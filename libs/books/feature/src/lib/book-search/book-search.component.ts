@@ -35,6 +35,11 @@ export class BookSearchComponent implements OnInit {
     this.store.select(getAllBooks).subscribe(books => {
       this.books = books;
     });
+    this.searchForm.get('term').valueChanges.subscribe( x =>{
+      setTimeout(()=>{
+        this.searchBooks()
+      },500)
+    } );
   }
 
   formatDate(date: void | string) {
