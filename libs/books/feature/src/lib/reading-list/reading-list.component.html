@@ -9,6 +9,20 @@
         {{ b.authors.join(',') }}
       </div>
     </div>
+    <div class="reading-list-item--details">
+      <strong class="reading-list-item--details--title">
+                         <button
+                        mat-icon-button
+                        color="accent"
+                        (click)="updateAllComplete(b)"
+                      >
+                        <mat-icon>add_circle</mat-icon>  Finished
+                      </button>           
+        </strong>
+      <div class="reading-list-item--details--author">
+        22-10-2023
+      </div>
+    </div>
     <div>
       <button
         mat-icon-button
